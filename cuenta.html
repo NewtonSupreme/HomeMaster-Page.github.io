@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Inicio de Sección</title>
+        <link rel="stylesheet" href="css/cuenta.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- ICONS: Font Awesome -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="hm-header">
+                <div class="container">
+                    <div class="menu-logo-nav">
+    
+                        <div class="hm-logo">
+                            <a href="index.html">
+                                <img src="img/logo-home-master-store.png" alt="">
+                            </a>
+                        </div>
+            <nav class="navigation">
+              <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./Productos.html">Productos</a></li>
+                <li><a href="./Nosotros.html">Nosotros</a></li>
+                <li><a href="./Contacto.html">Contacto</a></li>
+    
+                <li class="car" >
+                    <div class="hm-icon-cart">
+                        <a href="#">
+                            <i class="las la-shopping-cart"></i>
+                            <span>0</span>
+                        </a>
+                    </div>
+                    <div id="carrito" class="dropdown-menu">
+                      <table id="lista-carrito" class="table">
+                          <thead>
+                              <tr>
+                                  <th>Imagen</th>
+                                  <th>Nombre</th>
+                                  <th>Precio</th>
+                                  <th></th>
+                              </tr>
+                          </thead>
+                          <tbody></tbody>
+                      </table>
+    
+                      <a href="#" id="vaciar-carrito" class="button-vaciar">Vaciar Carrito</a>
+                      <a href="#" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </div>
+        </header>
+                
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="img/modelos.png" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()">Registro</span>
+                                <hr id="Indicator">
+                            </div>
+                            <form id="LoginForm" onsubmit="handleLogin(event)">
+                                <input type="text" id="login-username" placeholder="usuario">
+                                <input type="password" id="login-password" placeholder="password">
+                                <button type="submit" class="btn">Iniciar sección</button>
+                                <a href="">Recuperar contraseña</a>
+                            </form>
+                            
+                            <form id="RegForm" onsubmit="handleRegister(event)">
+                                <input type="text" id="register-username" placeholder="usuario">
+                                <input type="email" id="register-email" placeholder="email">
+                                <input type="password" id="register-password" placeholder="password">
+                                <button type="submit" class="btn">Registrarse</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        
+        <footer>
+            
+            <div class="container">
+
+                <div class="foo-row">
+                    <div class="foo-col">
+                        <h2>Suscríbete <br>a nuestros servicios</h2>
+                        <form action="" method="GET">
+
+                            <div class="f-input">
+                                <input type="text" placeholder="Ingrese su correo">
+                                <button type="submit" class="hm-btn-round btn-primary"><i class="far fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="foo-col">
+                        <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                           <li><a href="productos.html">Productos</a></li>
+                           <li><a href="nosotros.html">Nosotros</a></li>
+                           <li><a href="contacto.html">Contacto</a></li>
+                           <li><a href="https://api.whatsapp.com/send?phone=584142279708">Whatsapps</a></li>
+                           <li><a href="carrito.html">Compras</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <div class="foo-copy">
+            <div class="container">
+                <p>HomeMaster STORE 2024 © Todos los derechos reservados</p>
+                <p>Realizado por Leandro Marquez</p>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+        <script>
+            // Función que se ejecuta al cargar la página para mostrar el formulario de login por defecto
+            window.onload = function() {
+                login();  // Aseguramos que el login sea mostrado al principio
+            };
+        
+            // Funciones para mostrar ventanas emergentes con SweetAlert2
+        
+            function handleLogin(event) {
+                event.preventDefault();
+                const username = document.getElementById("login-username").value;
+                const password = document.getElementById("login-password").value;
+        
+                // Validación simple para el inicio de sesión
+                if (username === "admin" && password === "1234") {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Bienvenido',
+                        text: `Hola, ${username}!`,
+                        confirmButtonText: 'Continuar'
+                    }).then(() => {
+                        // Redirigir a productos.html después de login exitoso
+                        window.location.href = "productos.html";  // Redirección
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Usuario o contraseña incorrectos.',
+                        confirmButtonText: 'Intentar de nuevo'
+                    });
+                }
+            }
+        
+            function handleRegister(event) {
+                event.preventDefault();
+                const username = document.getElementById("register-username").value;
+                const email = document.getElementById("register-email").value;
+                const password = document.getElementById("register-password").value;
+        
+                // Mensaje de éxito al registrarse
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Registro exitoso',
+                    html: `
+                        <p>Bienvenido, <strong>${username}</strong>!</p>
+                        <p>Tu correo registrado es: <strong>${email}</strong></p>
+                    `,
+                    confirmButtonText: 'Continuar'
+                }).then(() => {
+                    // Aquí puedes limpiar los campos o redirigir al usuario si es necesario
+                    console.log('Usuario registrado con éxito.');
+                });
+            }
+        
+            // Función para manejar el cambio entre login y registro
+            var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var Indicator = document.getElementById("Indicator");
+        
+            function register() {
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+            }
+        
+            function login() {
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+        </script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+    <script src="js/compra.js"></script>
+    </body>
+</html>

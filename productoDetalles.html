@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+        <!-- ICONS: Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <!-- ICONS: Line Awesome -->
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="css/carrito.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header>
+        <div class="hm-header">
+            <div class="container">
+                <div class="menu-logo-nav">
+
+                    <div class="hm-logo">
+                        <a href="index.html">
+                            <img src="img/logo-home-master-store.png" alt="">
+                        </a>
+                    </div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./Productos.html">Productos</a></li>
+            <li><a href="./Nosotros.html">Nosotros</a></li>
+            <li><a href="./Contacto.html">Contacto</a></li>
+            <li><a href="./cuenta.html">Iniciar sesión</a></li>
+
+            <li class="car" >
+                <div class="hm-icon-cart">
+                    <a href="#">
+                        <i class="las la-shopping-cart"></i>
+                        <span>0</span>
+                    </a>
+                </div>
+                <div id="carrito" class="dropdown-menu">
+                  <table id="lista-carrito" class="table">
+                      <thead>
+                          <tr>
+                              <th>Imagen</th>
+                              <th>Nombre</th>
+                              <th>Precio</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+                      <tbody></tbody>
+                  </table>
+
+                  <a href="#" id="vaciar-carrito" class="button-vaciar">Vaciar Carrito</a>
+                  <a href="#" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</div>
+    </header>
+
+
+<main>
+
+        <div class="container-productos" id="lista-productos">
+
+          <div class="card">
+            <img src="img/1.jpg" class="card-img">
+            <h5>Ropa Hello Kitty</h5>
+            <p>SKU: ROP0000074</p>
+            <p>$.<small class="precio">18</small></p>
+            <a href="#" class="button agregar-carrito" data-id="1">Agregar al carrito</a>
+          </div>
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Pelota Soga Nudo Grande Colores</h5>
+            <p>SKU: JUG0000005</p>
+            <p>$.<small class="precio">14</small></p>
+            <a href="#" class="button agregar-carrito" data-id="2">Agregar al carrito</a>
+          </div>
+          <div class="card">
+            <img src="img/3.jpg" class="card-img">
+            <h5>Pack Yogy Helado para perros 100% Natural 100g de Barker</h5>
+            <p>SKU: BPY4UND</p>
+            <p>$.<small class="precio">24</small></p>
+            <a href="#" class="button agregar-carrito" data-id="3">Agregar al carrito</a>
+          </div>
+
+          <div class="card">
+            <img src="img/4.jpg" class="card-img">
+            <h5>Dingo Dental Mini Bones 7und x70gr</h5>
+            <p>SKU: DDMB7U70GR</p>
+            <p>$.<small class="precio">26</small></p>
+            <a href="#" class="button agregar-carrito" data-id="4">Agregar al carrito</a>
+          </div>
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Hartz - Duraplay Ball Medium</h5>
+            <p>SKU: HDB04</p>
+            <p>$.<small class="precio">35</small></p>
+            <a href="#" class="button agregar-carrito" data-id="5">Agregar al carrito</a>
+          </div>
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Ropa Avengers</h5>
+            <p>SKU: ROP0000023</p>
+            <p>$.<small class="precio">21</small></p>
+            <a href="#" class="button agregar-carrito" data-id="6">Agregar al carrito</a>
+          </div>
+
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Animal Planet Juguete P/Mascota Medium</h5>
+            <p>SKU: AP-D794-011</p>
+            <p>$.<small class="precio">29</small></p>
+            <a href="#" class="button agregar-carrito" data-id="7">Agregar al carrito</a>
+          </div>
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Hoodie Hotdogz Mr. Charlie</h5>
+            <p>SKU: HTD-TSH023-1</p>
+            <p>$.<small class="precio">90</small></p>
+            <a href="#" class="button agregar-carrito" data-id="8">Agregar al carrito</a>
+          </div>
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Hills PD Metabolic Treats</h5>
+            <p>SKU: HPDMT</p>
+            <p>$.<small class="precio">45</small></p>
+            <a href="#" class="button agregar-carrito" data-id="9">Agregar al carrito</a>
+          </div>
+
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Animal Planet Juguete P/Mascota Medium</h5>
+            <p>SKU: AP-D794-011</p>
+            <p>$.<small class="precio">29</small></p>
+            <a href="#" class="button agregar-carrito" data-id="10">Agregar al carrito</a>
+          </div>
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Hoodie Hotdogz Mr. Charlie</h5>
+            <p>SKU: HTD-TSH023-1</p>
+            <p>$.<small class="precio">90</small></p>
+            <a href="#" class="button agregar-carrito" data-id="11">Agregar al carrito</a>
+          </div>
+          <div class="card">
+            <img src="img/2.jpg" class="card-img">
+            <h5>Hills PD Metabolic Treats</h5>
+            <p>Descripción: HPDMT</p>
+            <p>$.<small class="precio">45</small></p>
+            <a href="#" class="button agregar-carrito" data-id="12">Agregar al carrito</a>
+          </div>
+
+        </div>
+</main>
+  
+
+         <!-- =================================
+           FOOTER
+        ================================== -->
+        <footer>
+            
+            <div class="container">
+
+                <div class="foo-row">
+                    <div class="foo-col">
+                        <h2>Suscríbete <br>a nuestros servicios</h2>
+                        <form action="" method="GET">
+
+                            <div class="f-input">
+                                <input type="text" placeholder="Ingrese su correo">
+                                <button type="submit" class="hm-btn-round btn-primary"><i class="far fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="foo-col">
+                        <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                           <li><a href="productos.html">Productos</a></li>
+                           <li><a href="nosotros.html">Nosotros</a></li>
+                           <li><a href="contacto.html">Contacto</a></li>
+                           <li><a href="https://api.whatsapp.com/send?phone=584142279708">Whatsapps</a></li>
+                           <li><a href="carrito.html">Compras</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <div class="foo-copy">
+            <div class="container">
+                <p>HomeMaster STORE 2024 © Todos los derechos reservados</p>
+                <p>Realizado por Leandro Marquez</p>
+            </div>
+        </div>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script  src="js/scripts.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+    <script src="js/compra.js"></script>
+
+        <!-- Mi Script -->
+        <script src="js/app.js"></script>
+
+        <script>
+        
+            AOS.init({
+                duration: 1200,
+            })
+    
+    
+        </script>
+</body>
+</html>
